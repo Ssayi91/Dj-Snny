@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Deejay SnnY</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Assets/fontawesome-free-6.5.1-web/css/all.css">
 </head>
 <body>
     <div class="image1">
@@ -18,8 +18,8 @@
      </div>   
     </div>
     <section class="section section-dark">
-        <h2>Section One</h2>
-        <p>Good Vibes Good Music, Lets interact through music,</p>
+        <h2>Music Mixes</h2>
+        <p>Lets interact through music.</p>
     </section>
 
     <div class="image2">
@@ -31,8 +31,14 @@
        </div>
     
        <section class="section section-light">
-        <h2>Section Two</h2>
-        <p>Good Vibes Good Music, Lets interact through music,</p>
+        <h2>Social Links</h2>
+        <p>Good Vibes Good Music. <br>Share,follow,subscribe</p>
+        <div class="links">
+            <a href="https://www.facebook.com/shawn.deejay/" target="_blank" title="facebook">
+            <i class="fab fa-facebook fa-2x"></i></a>
+            <a href="https://www.youtube.com/channel/UCBUMjtvz5tTqoTlUQH6whUg" target="_blank" title="youtube">
+                <i class="fa-brands fa-square-youtube fa-2x"></i></a>
+        </div>
     </section>
 
     <div class="image3">
@@ -44,9 +50,39 @@
        </div>
 
     <section class="section section-dark">
-    <h2>Section three</h2>
-    <p> Good Music Good times.<br>For more follow me on,<br><i class="fa-brands fa-square-facebook"></i> share, subscribe.</p>
+    <h2>Music Player</h2>
+    <div class="music-container">
+        <div class="music-info">
+            <h4 id="title">Press Play, Enjoy</h4>
+            <div class="progress-container">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <audio src="Assets/Deejay Snny-Quick Session 1.mp3" id="audio"></audio>
+        <div class="image-container">
+            <img src="Assets/img/dj snny variant 4.png" alt="mix-cover" id="cover" />
+        </div>
+    
+    <div class="navigation">
+        <button id="prev" class="action-btn">
+            <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn-big">
+            <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+            <i class="fas fa-forward"></i>
+        </button>
+        <button id="volume-up" class="action-btn">
+            <i class="fas fa-volume-up"></i>
+        </button>
+        <button id="volume-down" class="action-btn">
+            <i class="fas fa-volume-down"></i>
+        </button>
+    </div>
+    </div>
     </section>
+
     <div class="image1">
         <div class="imgtxt">
            <span class="border">
@@ -54,6 +90,6 @@
            </span>
         </div>   
        </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>
