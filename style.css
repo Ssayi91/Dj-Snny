@@ -87,18 +87,45 @@ body, html{
     color: #1f628e;
 }
 
-
-.links i{
-    color:#1f628e;
-    margin-right: 20px;
+.links{
+    display: flex;
+    justify-content: center;
 }
 
-.links i:hover{
-    cursor: pointer;
-    color:black;
-    transition: ease-in-out 3s;
-   
+.links a{
+    margin: 0 10px;
 }
+
+
+.links svg{
+    min-height: 100%;
+    width: 60px;
+    justify-content: center;   
+}
+
+#hearthis{
+    min-height: 100%;
+    width:150px;
+    justify-content: center;
+}
+
+#youtube{
+    min-height: 100%;
+    width: 150px;
+    margin-bottom: 5px;
+}
+
+.foot{
+align-content: center;
+font-family: monospace;
+font-size: 22px;
+font-weight: 600;
+text-align: center;
+border: 2px solid;
+border-color: #1f628e;
+background-color: #1f628e;
+}
+
 /* music player*/
 .music-container{
     background-color: #1f628e;
