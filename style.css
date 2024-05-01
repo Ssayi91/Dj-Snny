@@ -105,7 +105,10 @@ body, html{
 
 #hearthis{
     min-height: 100%;
-    width:150px;
+    width:120px;
+    height: auto;
+    padding:5px 5px;
+    
     justify-content: center;
 }
 
@@ -254,6 +257,8 @@ background-color: #1f628e;
     transition: width 0.1s linear;
 }
 
+/* mobile responsive */
+
 
 @media(max-width:568px) {
     .image1, .image2,.image3{
@@ -261,3 +266,29 @@ background-color: #1f628e;
     }
     
 }
+@media(max-width: 768px) {
+    h1, h2, h3 {
+        font-size: 32px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 18px;
+    }
+    .section {
+        padding: 30px 20px;
+    }
+}
+@media(max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+    .action-btn, .action-btn-big {
+        padding: 8px;
+        font-size: 20px;
+        margin: 5px 0;
+    }
+}
+
