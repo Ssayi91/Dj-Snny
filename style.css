@@ -8,6 +8,7 @@ font-weight: 700;
 }
 h4{
     font-size: 22px;
+    font-weight: 500;
    
 }
 p{
@@ -23,6 +24,10 @@ body, html{
     font-weight: 500;
     line-height: 2em;
     color: 666;
+    text-transform: capitalize;
+}
+span{
+    color: #1f628e;
 }
 
 .image1, .image2, .image3{
@@ -108,14 +113,17 @@ body, html{
     width:120px;
     height: auto;
     padding:5px 5px;
-    
-    justify-content: center;
 }
 
 #youtube{
     min-height: 100%;
     width: 150px;
     margin-bottom: 5px;
+}
+
+.mixcloud{
+    min-height: 100%;
+    width: auto;
 }
 
 .foot{
