@@ -113,17 +113,20 @@ span{
     width:120px;
     height: auto;
     padding:5px 5px;
+    overflow: hidden;
 }
 
 #youtube{
     min-height: 100%;
     width: 150px;
     margin-bottom: 5px;
+    overflow: hidden;
 }
 
 .mixcloud{
     min-height: 100%;
-    width: auto;
+    width: 120px;
+    overflow: hidden;
 }
 
 .foot{
