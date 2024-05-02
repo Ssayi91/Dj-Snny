@@ -10,58 +10,71 @@ const cover = document.querySelector('#cover')
 const volumeUpBtn = document.querySelector('#volume-up');
 const volumeDownBtn = document.querySelector('#volume-down');
 
+// Song titles and their corresponding audio and image sources
+const songs = [
+    {
+        title: 'Deejay Snny-Quick Session 1',
+        audioSrc: 'Assets/Deejay Snny-Quick Session 1.mp3',
+        imageSrc: 'Assets/img/dj snny variant 4.png'
+    },
+    {
+        title: 'Medley sensation 1',
+        audioSrc: 'Assets/Medley sensation 1.mp3',
+        imageSrc: 'Assets/img/dj snny variant 3.png'
+    }
+];
 
-// Song title
-const songs = ['Deejay Snny-Quick Session 1']
+// Current song index
+let songIndex = 0;
 
-//keep track of songs
-let songIndex = 0
+// Initially load song info to the DOM
+loadSong(songs[songIndex]);
 
-//Initially load song info DOM
-loadSong(songs[songIndex])
-
-//Update song details
-function loadSong(song){
-    title.innerText = song
-    audio.src = `Assets/${'Deejay Snny-Quick Session 1'}.mp3`
+// Update song details
+function loadSong(song) {
+    title.innerText = song.title;
+    audio.src = song.audioSrc;
+    cover.src = song.imageSrc;
 }
 
+// Play the song
 function playSong() {
-    musicContainer.classList.add('play')
-    playBtn.querySelector('i,fas').classList.remove('fa-play')
-    playBtn.querySelector('i,fas').classList.add('fa-pause')
-    audio.play()
+    musicContainer.classList.add('play');
+    playBtn.querySelector('i').classList.remove('fa-play');
+    playBtn.querySelector('i').classList.add('fa-pause');
+    audio.play();
 }
 
+// Pause the song
 function pauseSong() {
-    musicContainer.classList.remove('play')
-    playBtn.querySelector('i,fas').classList.add('fa-play')
-    playBtn.querySelector('i,fas').classList.remove('fa-pause')
-    audio.pause()
-} 
-
-// event listeners
-playBtn.addEventListener('click', () => {
-const isPlaying = musicContainer.classList.contains('play')
-
-if(isPlaying){
-    pauseSong()
-}else{
-    playSong()
+    musicContainer.classList.remove('play');
+    playBtn.querySelector('i').classList.add('fa-play');
+    playBtn.querySelector('i').classList.remove('fa-pause');
+    audio.pause();
 }
-})
+
+// Event listener for play/pause button
+playBtn.addEventListener('click', () => {
+    const isPlaying = musicContainer.classList.contains('play');
+
+    if (isPlaying) {
+        pauseSong();
+    } else {
+        playSong();
+    }
+});
 
 // Function to increase volume
 function increaseVolume() {
-    if (audio.volume < 1) { // Check if volume is not already at maximum
-        audio.volume += 0.5; // Increase volume by 0.1 (10%)
+    if (audio.volume < 1) {
+        audio.volume += 0.1;
     }
 }
 
 // Function to decrease volume
 function decreaseVolume() {
-    if (audio.volume > 0) { // Check if volume is not already at minimum
-        audio.volume -= 0.1
+    if (audio.volume > 0) {
+        audio.volume -= 0.1;
     }
 }
 
@@ -70,3 +83,23 @@ volumeUpBtn.addEventListener('click', increaseVolume);
 
 // Event listener for volume down button
 volumeDownBtn.addEventListener('click', decreaseVolume);
+
+// Event listener for next button
+nextBtn.addEventListener('click', () => {
+    songIndex++;
+    if (songIndex >= songs.length) {
+        songIndex = 0;
+    }
+    loadSong(songs[songIndex]);
+    playSong();
+});
+
+// Event listener for previous button
+prevBtn.addEventListener('click', () => {
+    songIndex--;
+    if (songIndex < 0) {
+        songIndex = songs.length - 1;
+    }
+    loadSong(songs[songIndex]);
+    playSong();
+});
