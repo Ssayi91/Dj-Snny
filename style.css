@@ -85,7 +85,8 @@ span{
 .border{
     background-color: transparent;
     color: black;
-    padding: 20px;
+    padding: 26px;
+    font-size: 35px;
 }
 .border.trans{
     background-color: transparent;
@@ -132,12 +133,17 @@ span{
 .foot{
 align-content: center;
 font-family: monospace;
+text-transform: capitalize;
 font-size: 22px;
 font-weight: 600;
 text-align: center;
 border: 2px solid;
 border-color: #1f628e;
 background-color: #1f628e;
+}
+
+.foot a :hover{
+    cursor: pointer;
 }
 
 /* music player*/
